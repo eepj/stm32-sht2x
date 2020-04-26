@@ -114,9 +114,9 @@ int main(void) {
 	/* USER CODE BEGIN WHILE */
 	while (1) {
 		unsigned char buffer[100] = { 0 };
-		/* Get current temperature & relative humidity. */
+		/* Gets current temperature & relative humidity. */
 		float cel = SHT2x_GetTemperature(1);
-		/* Convert temperature to degrees Fahrenheit and Kelvin */
+		/* Converts temperature to degrees Fahrenheit and Kelvin */
 		float fah = SHT2x_CelsiusToFahrenheit(cel);
 		float kel = SHT2x_CelsiusToKelvin(cel);
 		float rh = SHT2x_GetRelativeHumidity(1);
