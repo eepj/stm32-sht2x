@@ -113,13 +113,14 @@ int main(void) {
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	while (1) {
-		/* Get current date and time. */
 		unsigned char buffer[100] = { 0 };
-		/* May show warning below. Ignore and proceed. */
+		/* Get current temperature & relative humidity. */
 		float cel = SHT2x_GetTemperature(1);
+		/* Convert temperature to degrees Fahrenheit and Kelvin */
 		float fah = SHT2x_CelsiusToFahrenheit(cel);
 		float kel = SHT2x_CelsiusToKelvin(cel);
 		float rh = SHT2x_GetRelativeHumidity(1);
+		/* May show warning below. Ignore and proceed. */
 		sprintf(buffer,
 				"%d.%dºC, %d.%dºF, %d.%d K, %d.%d%% RH\n",
 				SHT2x_Pre(cel), SHT2x_Post(cel, 1),
