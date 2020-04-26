@@ -18,9 +18,9 @@
  * Minimal setup:
  *								 _________
  *					            |  _____  |
- *                      N/C 1 --| |_____| |-- 3 N/C
- *                      VDD 2 --|         |-- 2 GND
- *                     SDA1 4 --|         |-- 1 SCL1
+ *                      N/C 4 --| |_____| |-- 3 N/C
+ *                      VDD 5 --|         |-- 2 GND
+ *                     SDA1 6 --|         |-- 1 SCL1
  *					            |_________|
  *
  *				Refer to datasheets for further information.
