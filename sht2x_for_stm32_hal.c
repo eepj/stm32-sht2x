@@ -1,3 +1,5 @@
+/*An STM32 HAL library written for the SHT2x temperature/humidity sensor series. Tested on an SHT20.*/
+/* Libraries by @eepj www.github.com/eepj */
 #include "sht2x_for_stm32_hal.h"
 #include "main.h"
 #ifdef __cplusplus
