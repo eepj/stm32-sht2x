@@ -1,4 +1,4 @@
-/* An STM32 HAL library written for the SHT2x temperature/humidity sensor series. /
+/* An STM32 HAL library written for the SHT2x temperature/humidity sensor series. */
 /* Library by @eepj www.github.com/eepj */
 #ifndef SHT2X_FOR_STM32_HAL_H
 #define SHT2X_FOR_STM32_HAL_H
