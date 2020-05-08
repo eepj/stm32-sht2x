@@ -18,4 +18,4 @@ An STM32 HAL library written for the SHT2x temperature/humidity sensor series. T
 * Refer to datasheets for further information.
 
 ## Known issues
-* [`sht2x_for_stm32_hal.c`](./sht2x_for_stm32_hal.c) may throw a compliation error  in Keil.
+* [`sht2x_for_stm32_hal.c`](./sht2x_for_stm32_hal.c) may throw a compliation error in Keil.
