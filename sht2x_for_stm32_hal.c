@@ -70,14 +70,13 @@ float SHT2x_GetRelativeHumidity(uint8_t hold) {
  * @brief Sets the measurement resolution.
  * @param res Enum resolution.
  * @note Available resolutions: RES_14_12, RES_12_8, RES_13_10, RES_11_11.
- * @note RES_14_12 = 14 bit temperature and 12 bit RH resolution, etc.
+ * @note RES_14_12 = 14-bit temperature and 12-bit RH resolution, etc.
  */
 void SHT2x_SetResolution(SHT2x_Resolution res) {
 	uint8_t val = SHT2x_ReadUserReg();
 	val = (val & 0b01111110) | res;
 	uint8_t temp[2] = { SHT2x_WRITE_REG, val };
-	HAL_I2C_Master_Transmit(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, temp, 2,
-			SHT2x_TIMEOUT);
+	HAL_I2C_Master_Transmit(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, temp, 2, SHT2x_TIMEOUT);
 }
 
 /**
