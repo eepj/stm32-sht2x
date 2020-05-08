@@ -15,7 +15,7 @@ void SHT2x_Init(I2C_HandleTypeDef *hi2c) {
 }
 
 /**
- *  @brief Performs a software reset.
+ *  @brief Performs a soft reset.
  */
 void SHT2x_SoftReset(void){
 	uint8_t cmd = SHT2x_SOFT_RESET;
