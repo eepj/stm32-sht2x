@@ -74,7 +74,7 @@ float SHT2x_GetRelativeHumidity(uint8_t hold) {
  */
 void SHT2x_SetResolution(SHT2x_Resolution res) {
 	uint8_t val = SHT2x_ReadUserReg();
-	val = (val & 0b01111110) | res;
+	val = (val & 0x7e) | res;
 	uint8_t temp[2] = { SHT2x_WRITE_REG, val };
 	HAL_I2C_Master_Transmit(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, temp, 2, SHT2x_TIMEOUT);
 }
