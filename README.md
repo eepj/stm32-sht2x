@@ -18,4 +18,4 @@ An STM32 HAL library written for the SHT2x temperature/humidity sensor series. T
 * Refer to datasheets for further information.
 
 ## Known issues
-* Replaced binary values with hexadecimal for Keil.
+* Replaced binary values with hexadecimal for Keil compatibility.
