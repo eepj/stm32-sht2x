@@ -15,16 +15,22 @@ void SHT2x_Init(I2C_HandleTypeDef *hi2c) {
 }
 
 /**
+ *  @brief Performs a software reset.
+ */
+void SHT2x_SoftReset(void){
+	uint8_t cmd = SHT2x_SOFT_RESET;
+	HAL_I2C_Master_Transmit(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, &cmd, 1, SHT2x_TIMEOUT);
+}
+
+/**
  * @brief Gets the value stored in user register.
  * @return 8-bit value stored in user register, 0 to 255.
  */
 uint8_t SHT2x_ReadUserReg(void) {
 	uint8_t val;
 	uint8_t cmd = SHT2x_READ_REG;
-	HAL_I2C_Master_Transmit(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, &cmd, 1,
-			SHT2x_TIMEOUT);
-	HAL_I2C_Master_Receive(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, &val, 1,
-			SHT2x_TIMEOUT);
+	HAL_I2C_Master_Transmit(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, &cmd, 1, SHT2x_TIMEOUT);
+	HAL_I2C_Master_Receive(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, &val, 1, SHT2x_TIMEOUT);
 	return val;
 }
 
@@ -35,11 +41,8 @@ uint8_t SHT2x_ReadUserReg(void) {
  */
 uint16_t SHT2x_GetRaw(uint8_t cmd) {
 	uint8_t val[3] = { 0 };
-	HAL_I2C_Master_Transmit(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, &cmd, 1,
-			SHT2x_TIMEOUT);
-	while (HAL_I2C_Master_Receive(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, val, 3,
-			SHT2x_TIMEOUT) != HAL_OK)
-		;
+	HAL_I2C_Master_Transmit(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, &cmd, 1, SHT2x_TIMEOUT);
+	HAL_I2C_Master_Receive(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, val, 3, SHT2x_TIMEOUT);
 	return val[0] << 8 | val[1];
 }
 
