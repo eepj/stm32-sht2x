@@ -5,12 +5,10 @@ An STM32 HAL library written for the SHT2x temperature/humidity sensor series. T
 * Minimal setup:
 ```
                                              _________
-                                            |  _____  |
                                     N/C 4 --| |_____| |-- 3 N/C
                                     VDD 5 --|         |-- 2 GND
-                                   SDA1 6 --|         |-- 1 SCL1
-                                            |_________|
- 
+                                   SDA1 6 --|_________|-- 1 SCL1
+                                   
  ```
 * In STM32CubeIDE, include [`sht2x_for_stm32_hal.h`](./sht2x_for_stm32_hal.h) and [`sht2x_for_stm32_hal.c`](./sht2x_for_stm32_hal.c).
 * Complie and flash [`main.c`](./examples/main.c) in [`./examples`](./examples) to microcontroller.
