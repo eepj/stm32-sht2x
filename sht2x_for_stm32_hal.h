@@ -15,18 +15,18 @@
 #define SHT2x_SOFT_RESET		0b11111110
 #define SHT2x_TIMEOUT			1000
 /*----------------------------------------------------------------------------*/
-typedef enum Resolution {
+typedef enum SHT2x_Resolution {
 	RES_14_12 = 0b00000000,
 	RES_12_8 = 0b00000001,
 	RES_13_10 = 0b10000000,
 	RES_11_11 = 0b10000001,
-} Resolution;
+} SHT2x_Resolution;
 /*----------------------------------------------------------------------------*/
 I2C_HandleTypeDef *_sht2x_ui2c;
 
 void SHT2x_Init(I2C_HandleTypeDef *hi2c);
 void SHT2x_SoftReset(void);
-void SHT2x_SetResolution(Resolution res);
+void SHT2x_SetResolution(SHT2x_Resolution res);
 
 uint8_t SHT2x_ReadUserReg(void);
 
