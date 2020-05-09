@@ -22,8 +22,6 @@ typedef enum SHT2x_Resolution {
 	RES_11_11 = 0x81,
 } SHT2x_Resolution;
 /*----------------------------------------------------------------------------*/
-I2C_HandleTypeDef *_sht2x_ui2c;
-
 void SHT2x_Init(I2C_HandleTypeDef *hi2c);
 void SHT2x_SoftReset(void);
 void SHT2x_SetResolution(SHT2x_Resolution res);
