@@ -6,6 +6,8 @@
 extern "C"{
 #endif
 
+I2C_HandleTypeDef *_sht2x_ui2c;
+	
 /**
  * @brief Initializes the SHT2x temperature/humidity sensor.
  * @param hi2c User I2C handle pointer.
