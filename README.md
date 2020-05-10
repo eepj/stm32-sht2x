@@ -13,7 +13,8 @@ An STM32 HAL library written for the SHT2x temperature/humidity sensor series. T
 * In STM32CubeIDE, include [`sht2x_for_stm32_hal.h`](./sht2x_for_stm32_hal.h) and [`sht2x_for_stm32_hal.c`](./sht2x_for_stm32_hal.c).
 * Complie and flash [`main.c`](./examples/main.c) in [`./examples`](./examples) to microcontroller.
 * Read the results from a UART monitor.
-* Refer to datasheets for further information.
+* Refer to [datasheets](https://www.sensirion.com/en/environmental-sensors/humidity-sensors/humidity-temperature-sensor-sht2x-digital-i2c-accurate/) for further information.
 
 ## Known issues
 * Replaced binary values with hexadecimal for Keil compatibility.
+* Moved user I2C handle from .h header to .c file to prevent redefinition error.
