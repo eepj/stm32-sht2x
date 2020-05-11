@@ -16,5 +16,5 @@ An STM32 HAL library written for the SHT2x temperature/humidity sensor series. T
 * Refer to [datasheets](https://www.sensirion.com/en/environmental-sensors/humidity-sensors/humidity-temperature-sensor-sht2x-digital-i2c-accurate/) for further information.
 
 ## Known issues
-* Replaced binary values with hexadecimal for Keil compatibility.
+* Replaced binary values with hexadecimal for compatibility with Keil.
 * Moved user I2C handle from .h header to .c file to prevent redefinition error.
