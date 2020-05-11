@@ -17,4 +17,4 @@ An STM32 HAL library written for the SHT2x temperature/humidity sensor series. T
 
 ## Known issues
 * Replaced binary values with hexadecimal for compatibility with Keil.
-* Moved user I2C handle definition from .h header to .c file to prevent multiple definition error. Definition in .h header made `extern`.
+* Moved user I2C handle definition from .h header to .c file to prevent multiple definition error. Made definition in .h header  `extern`.
