@@ -44,7 +44,7 @@ uint8_t SHT2x_ReadUserReg(void) {
 uint16_t SHT2x_GetRaw(uint8_t cmd) {
 	uint8_t val[3] = { 0 };
 	HAL_I2C_Master_Transmit(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, &cmd, 1, SHT2x_TIMEOUT);
-	while(HAL_I2C_Master_Receive(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, val, 3, SHT2x_TIMEOUT));
+	HAL_I2C_Master_Receive(_sht2x_ui2c, SHT2x_I2C_ADDR << 1, val, 3, SHT2x_TIMEOUT);
 	return val[0] << 8 | val[1];
 }
 
