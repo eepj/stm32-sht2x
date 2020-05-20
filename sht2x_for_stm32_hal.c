@@ -105,7 +105,7 @@ float SHT2x_CelsiusToKelvin(float celsius) {
  * @param num Floating point number.
  * @return Integer part of floating point number.
  */
-int32_t SHT2x_Pre(float num) {
+int32_t SHT2x_GetInteger(float num) {
 	return num / 1;
 }
 
@@ -115,8 +115,8 @@ int32_t SHT2x_Pre(float num) {
  * @param num Floating point number.
  * @return Decimal part of floating point number.
  */
-uint32_t SHT2x_Post(float num, int digits) {
-	float postDec = num - SHT2x_Pre(num);
+uint32_t SHT2x_GetDecimal(float num, int digits) {
+	float postDec = num - SHT2x_GetInteger(num);
 	return postDec * SHT2x_Ipow(10, digits);
 }
 

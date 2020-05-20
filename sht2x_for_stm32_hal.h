@@ -38,8 +38,8 @@ float SHT2x_GetRelativeHumidity(uint8_t hold);
 float SHT2x_CelsiusToFahrenheit(float celsius);
 float SHT2x_CelsiusToKelvin(float celsius);
 
-int32_t SHT2x_Pre(float f);
-uint32_t SHT2x_Post(float f, int digits);
+int32_t SHT2x_GetInteger(float f);
+uint32_t SHT2x_GetDecimal(float f, int digits);
 uint32_t SHT2x_Ipow(uint32_t x, uint32_t y);
 
 #endif
