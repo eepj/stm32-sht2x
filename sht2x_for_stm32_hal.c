@@ -101,7 +101,7 @@ float SHT2x_CelsiusToKelvin(float celsius) {
 
 /**
  * @brief Gets the integer part of a floating point number.
- * @note Avoids the use of sprinf %f floating point formatting.
+ * @note Avoids the use of sprinf floating point formatting.
  * @param num Floating point number.
  * @return Integer part of floating point number.
  */
@@ -111,7 +111,7 @@ int32_t SHT2x_GetInteger(float num) {
 
 /**
  * @brief Gets the decimal part of a floating point number.
- * @note Avoids the use of sprinf %f floating point formatting.
+ * @note Avoids the use of sprinf floating point formatting.
  * @param num Floating point number.
  * @return Decimal part of floating point number.
  */
