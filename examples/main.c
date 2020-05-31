@@ -123,10 +123,10 @@ int main(void) {
 		/* May show warning below. Ignore and proceed. */
 		sprintf(buffer,
 				"%d.%dºC, %d.%dºF, %d.%d K, %d.%d%% RH\n",
-				SHT2x_Pre(cel), SHT2x_Post(cel, 1),
-				SHT2x_Pre(fah), SHT2x_Post(fah, 1),
-				SHT2x_Pre(kel), SHT2x_Post(kel, 1),
-				SHT2x_Pre(rh), SHT2x_Post(rh, 1));
+				SHT2x_GetInteger(cel), SHT2x_GetDecimal(cel, 1),
+				SHT2x_GetInteger(fah), SHT2x_GetDecimal(fah, 1),
+				SHT2x_GetInteger(kel), SHT2x_GetDecimal(kel, 1),
+				SHT2x_GetInteger(rh), SHT2x_GetDecimal(rh, 1));
 		HAL_UART_Transmit(&huart1, buffer, strlen(buffer), 1000);
 		HAL_Delay(250);
 		/* USER CODE END WHILE */
